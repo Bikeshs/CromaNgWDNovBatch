@@ -1,0 +1,68 @@
+<fieldset>
+    <legend>
+        <h1>{{title}}</h1>
+    </legend>
+    <form #f="ngForm" (ngSubmit)="saveData(tt1)">
+        <span><b>First Name</b></span> &nbsp;
+        <input name="tt1" pattern="((\s*[a-zA-Z0-9]+\s?[\s\-\s\'\.]?[a-zA-Z0-9]?\s*[\s\-\s\'\.]?[a-zA-Z0-9]?\s*[\s\-\s\'\.]?[a-zA-Z0-9]?\s*[\s\-\s\'\.]?[a-zA-Z0-9]+\s*)|[[a-zA-Z0-9] \s+]*)((,\s*[a-zA-Z0-9]+\s?[\s\-\s\'\.]?\s*[a-zA-Z0-9]+\s*[\s\-\s\'\.]?\s*[a-zA-Z0-9]?\s*[\s\-\s\'\.]?\s*[a-zA-Z0-9]?\s*[\s\-\s\'\.]?\s*[a-zA-Z0-9]?\s*)|(,[[a-zA-Z0-9] \s+]+))"
+            minlength="2" [required]="tt5.value" #tt1="ngModel" [(ngModel)]="objEmplyee.FirstName" type="text">
+        <div *ngIf="tt1.errors">
+            <span *ngIf="tt1.errors.required">Field is required</span><br>
+            <span *ngIf="tt1.errors.pattern">xyz</span>
+            <span *ngIf="tt1.errors.minlength">Field minlength is 2</span>
+        </div>
+        <br><br>
+        <span><b>City Name</b></span> &nbsp;&nbsp;&nbsp;
+        <select name="tt2" (ngModelChange)="test()" [(ngModel)]="objEmplyee.CityId" (change)="getSelectedData($event)">
+            <option value="0">Select City Name</option>
+            <option *ngFor="let xyz of list">{{xyz.name}}</option>
+        </select>
+        <br><br>
+        <span><b>Gender</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="tt3" [(ngModel)]="objEmplyee.Gender1" type="radio">
+        <input name="tt4" [(ngModel)]="objEmplyee.Gender2" type="radio">
+        <br><br>
+        <span><b>Active</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="tt5" #tt5="ngModel" [(ngModel)]="objEmplyee.IsActive" type="checkbox">
+        <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit">Submit</button>&nbsp;&nbsp;
+        <button type="button">Cancel</button>
+    </form>
+</fieldset>
+<!-- Directive Example -->
+<p *ngIf="objEmplyee.IsActive; else otherCond">Hello If condition is true</p>
+<ng-template #otherCond>
+    <p>Hello If condition is false</p>
+</ng-template>
+
+<p [hidden]="objEmplyee.IsActive">Hello value is true</p>
+<p [hidden]="!objEmplyee.IsActive">Hello value is false</p>
+<div>
+    <p *ngFor="let xyz of list">{{xyz.name}}</p>
+</div>
+
+<table border="2">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>MobileNo</th>
+        <th>Marks</th>
+        <th>Status</th>
+        <th>DOB</th>
+    </thead>
+    <tbody>
+        
+        <tr *ngFor="let itm of studentList" [ngClass]="{
+            'statusGreen':itm.marks>=40,
+            'statusRed':itm.marks<40            
+          }">
+            <td>{{itm.stuId}}</td>
+            <td>{{itm.name}}</td>
+            <td>{{itm.mobileNo | currency:'INR'}}</td>
+            <td>{{itm.marks}}</td>
+            <td>{{itm.status}}</td>
+            <td>{{itm.DOB|ageCount}}</td>
+        </tr>
+    </tbody>
+</table>
