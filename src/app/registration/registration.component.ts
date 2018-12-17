@@ -5,7 +5,7 @@ import { Employee } from "./registration.model";
     templateUrl: './registration.component.html'
 })
 export class RegistrationComponent {
-    title = "Employee registration form";
+    title = "Croma Employee registartion form";
     slectedValue: any;
     objEmplyee: Employee = new Employee();
     list = [];
