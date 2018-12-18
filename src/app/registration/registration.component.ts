@@ -23,7 +23,7 @@ export class RegistrationComponent {
             { stuId: 3, name: 'Vinit', mobileNo: '12345', marks: 40, status: '',DOB:'02/20/2018'  },
             { stuId: 4, name: 'Salman', mobileNo: '123456', marks: 50, status: '',DOB:'08/20/2017'  },
             { stuId: 5, name: 'Amrish', mobileNo: '1234567', marks: 60, status: '',DOB:'08/20/2016'  },
-            { stuId: 6, name: 'Sachin', mobileNo: '12345678', marks: 70, status: '',DOB:'08/20/2011'  },
+            { stuId: 6, name: 'Sachin kumar', mobileNo: '12345678', marks: 70, status: '',DOB:'08/20/2011'  },
         );
     }
     saveData(obj) {
