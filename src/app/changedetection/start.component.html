@@ -1,6 +1,8 @@
 <fieldset>
     <legend><b>Start Component</b></legend>
     <h1>Hello Start Bikesh Component</h1>
-    
+    <input type="text" [(ngModel)]="title">
+    <button type="button" (click)="click()">Click</button>
+    <parent (sendDataToChild)="receiveData($event)" [pullDataFromP]="title"></parent>
     <br><br><br>
 </fieldset>

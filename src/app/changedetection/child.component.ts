@@ -4,5 +4,5 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
     templateUrl: './child.component.html'
 })
 export class ChildComponent {
-    title: 'Hello Child Component';
+    title='Hello Child Component';
 }
