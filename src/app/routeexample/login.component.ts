@@ -5,5 +5,11 @@ import { Router } from "@angular/router";
     templateUrl: './login.component.html'
 })
 export class LoginComponent {
-    title='Hello login Component';
+    title = 'Hello login Component';
+    constructor(private route: Router) {
+
+    }
+    redirectToA() {
+        this.route.navigate(['./a']);
+    }
 }
