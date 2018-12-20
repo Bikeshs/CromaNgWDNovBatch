@@ -8,7 +8,7 @@ import { FormsModule } from "@angular/forms";
     declarations: [StartComponent, ParentComponent, ChildComponent],
     imports: [BrowserModule, FormsModule],
     providers: [],
-    bootstrap: [StartComponent]
+    bootstrap: [ParentComponent]
 })
 export class ChangeDetectionModule {
 

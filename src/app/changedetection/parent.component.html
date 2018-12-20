@@ -1,7 +1,9 @@
 <fieldset>
     <legend><b>Parent Component</b></legend>
-    <h1>{{title}}</h1>
+    <h1>{{Pname}}</h1>
+    <h1>DOB:{{DOB}}</h1>
+    <input type="text" [(ngModel)]="Pname">
     <button type="button" (click)="sendData()">Send Data</button>
-    <child></child>
+    <child (xtfhjvj)="data($event)" [pullDataFromP]="Pname"></child>
     <br><br><br><br><br><br><br>
 </fieldset>
