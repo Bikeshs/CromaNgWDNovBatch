@@ -1,3 +1,7 @@
 <h1>{{title}}</h1>
+EmailId:<input type="text" [(ngModel)]="name">
 <button type="button" (click)="redirectToA()">Redirect to A</button>
-<a [routerLink]="['./b']">Navigate To B</a>
+<a [routerLink]="['./a','bikesh']">Navigate To A</a>
+<br /><br />
+<button type="button" (click)="redirectToC()">Redirect to C</button>
+<a [routerLink]="['./c']" [queryParams]="{email:'Bikesh Srivastava'}">Navigate To C</a>
