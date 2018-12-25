@@ -5,3 +5,5 @@ EmailId:<input type="text" [(ngModel)]="name">
 <br /><br />
 <button type="button" (click)="redirectToC()">Redirect to C</button>
 <a [routerLink]="['./c']" [queryParams]="{email:'Bikesh Srivastava'}">Navigate To C</a>
+<br>
+<button type="button" (click)="redirectToOtherComp()">Redirect to Other Module Comp</button>

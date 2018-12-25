@@ -10,5 +10,6 @@ export const routes: Routes = [
     { path: 'b', component: BComponent },
     { path: 'c', component: CComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'otherm', loadChildren: '../othermodule/other.module#OtherModule' },
     { path: '**', component: LoginComponent }
 ];

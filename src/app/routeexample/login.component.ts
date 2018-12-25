@@ -23,4 +23,8 @@ export class LoginComponent {
             this.route.navigate(['./c'], { queryParams: { email: this.name } }); //redirect to C with  QueryString data
         }
     }
+    redirectToOtherComp() {
+        this.route.navigate(['otherm']);
+        //this.route.navigateByUrl("otherm");
+    }
 }
