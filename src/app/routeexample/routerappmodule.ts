@@ -8,10 +8,12 @@ import { LoginComponent } from "./login.component";
 import { BComponent } from "./b.component";
 import { RouterModule } from "@angular/router";
 import { routes } from "./route.config";
+import { UserService } from "../service/user.service";
+import { HttpModule } from "@angular/http";
 @NgModule({
     declarations: [StartComponent, AComponent, BComponent, CComponent, LoginComponent],
-    imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
-    providers: [],
+    imports: [HttpModule, BrowserModule, FormsModule, RouterModule.forRoot(routes)],
+    providers: [UserService],
     bootstrap: [StartComponent]
 })
 export class RouterAppModule {

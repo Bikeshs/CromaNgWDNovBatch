@@ -11,3 +11,13 @@ export class Employee {
         this.IsActive = false;
     }
 }
+export class User {
+    public ID: number;
+    public UserName: string;
+    public Password: string;
+    constructor() {
+        this.ID = 1,
+            this.UserName = "Bikesh";
+        this.Password = "abcd";
+    }
+}

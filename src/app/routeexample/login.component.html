@@ -7,3 +7,20 @@ EmailId:<input type="text" [(ngModel)]="name">
 <a [routerLink]="['./c']" [queryParams]="{email:'Bikesh Srivastava'}">Navigate To C</a>
 <br>
 <button type="button" (click)="redirectToOtherComp()">Redirect to Other Module Comp</button>
+<br>
+<br>
+<button type="button" (click)="showData()">Show Data</button>
+<button type="button" (click)="saveData()">Save Data</button>
+<br>
+<table>
+    <thead>
+        <th>Id</th>
+        <th>User Name</th>
+        <th>Password</th>
+    </thead>
+    <tr *ngFor="let itm of userList">
+        <td>{{itm.ID}}</td>
+        <td>{{itm.UserName}}</td>
+        <td>{{itm.Password}}</td>
+    </tr>
+</table>
