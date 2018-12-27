@@ -10,9 +10,10 @@ import { RouterModule } from "@angular/router";
 import { routes } from "./route.config";
 import { UserService } from "../service/user.service";
 import { HttpModule } from "@angular/http";
+import { NgDatepickerModule } from 'ng2-datepicker';
 @NgModule({
     declarations: [StartComponent, AComponent, BComponent, CComponent, LoginComponent],
-    imports: [HttpModule, BrowserModule, FormsModule, RouterModule.forRoot(routes)],
+    imports: [NgDatepickerModule,HttpModule, BrowserModule, FormsModule, RouterModule.forRoot(routes)],
     providers: [UserService],
     bootstrap: [StartComponent]
 })
