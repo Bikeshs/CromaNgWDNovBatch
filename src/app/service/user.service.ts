@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core'
+import { Injectable } from '@angular/core';
 import { Http } from "@angular/http";
 import { map } from 'rxjs/operators';
 @Injectable()
@@ -8,9 +8,7 @@ export class UserService {
         console.log('Hello user Service');
     }
     getUserData() {
-        return this.http.get(this.URL).pipe(map(x => {
-            return x.json();
-        }))
+        return this.http.get(this.URL);
     }
     getUserDataByPromise() {
         return this.http.get(this.URL);
